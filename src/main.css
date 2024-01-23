@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url(./assets/fonts/popins/Poppins-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: 'Reg-Poppins';
+    src: url(./assets/fonts/popins/Poppins-Thin.ttf);
+}
+
+@font-face {
+    font-family: 'header';
+    src: url(./assets/fonts/head/AhganiryaPersonalUse-Yznaj.ttf);
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
