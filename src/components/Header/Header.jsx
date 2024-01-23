@@ -25,14 +25,14 @@ function Header() {
 
         <div className="pr-0 md:pr-56">
           <button
-            className="md:hidden text-lilac"
+            className="lg:hidden text-lilac"
             onClick={toggleMenu}
             aria-label="Toggle Menu"
           >
             <img src={menu} alt="menu" className="w-8 h-8" />
          </button>
                   
-          <div className='md:flex hidden'>
+          <div className='lg:flex hidden'>
                 <NavLinks />
          </div>
         </div>
