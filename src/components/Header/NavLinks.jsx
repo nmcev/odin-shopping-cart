@@ -1,5 +1,4 @@
 import  cart  from '../../assets/icons/cart.svg'
-import searchLogo from '../../assets/icons/search.svg'
 import { Link } from 'react-router-dom'
 
 function NavLinks() {
@@ -9,6 +8,10 @@ function NavLinks() {
             <Link to="/">Home</Link>
             <Link to="products">Products</Link>
           
+            <Link to='about'>
+                 About
+            </Link>
+            
             <Link to='cart'>
                 <button className='relative flex items-center p-2 text-white'>
                      <img
@@ -24,9 +27,6 @@ function NavLinks() {
                 </button>
             </Link>
             
-            <li>
-                <img src={searchLogo} alt="search" />
-            </li>
         </ul>
     </nav>
      )
