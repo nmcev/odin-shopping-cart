@@ -16,9 +16,9 @@ function Header() {
 
   return (
     <>
-      <header className="flex justify-between items-center bg-creamy p-6 fixed w-full">
+      <header className="flex justify-between items-center bg-creamy p-6 sticky top-0 bottom-0 w-full shadow-md">
         <div className="flex items-center pl-2 md:pl-20">
-          <h1  className=" font-header text-2xl text-dimGray">
+          <h1  className=" font-header text-2xl text-lilac">
             Craft Glow
           </h1>
         </div>
