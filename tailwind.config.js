@@ -41,6 +41,9 @@ export default {
         16: '16px',
         18: '18px',
         20: '20px',
+      },
+      gridTemplateColumns: {
+        '1-3': '1fr 4fr',
       }
       
     },
