@@ -9,6 +9,8 @@ export default {
       poppins: ['Poppins', 'sans-serif'], 
       regPoppins: ['reg-poppins', 'sans-serif'],
       header: ['header', 'sans-serif'],
+      products: ['montserrat', 'sans-serif'],
+      'montserrat-reg': ['montserrat-reg', 'sans-serif'],
     },
     extend: {
       backgroundImage: {
@@ -22,14 +24,24 @@ export default {
         '5.5': '5.4rem',
       },
       colors: {
-        creamy: '#F5F5F5',
+        creamy: '#ffffff',
         lilac: '#C8A2C8',
         black: 'rgba(0, 0, 0, 0.5)',
         li: '#D1B3D1',
         dark: '#333333',
-        dimGray: '#666666',
-        orange: '#E48A42'
+        dimGray: '#6a6a6a',
+        border: '#cfcfcf',
+        orange: '#E48A42',
+        silver: '#EFEFEF',
+        products: '#1c1b1b'
       },
+      fontSize: {
+        12: '12px',
+        14: '14px',
+        16: '16px',
+        18: '18px',
+        20: '20px',
+      }
       
     },
   },
