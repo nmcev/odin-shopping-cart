@@ -8,6 +8,8 @@ import { ChakraProvider } from '@chakra-ui/react'
 import Under30 from './components/Products/under30/Under30.jsx'
 import MainProductsPage from './components/Products/MainProductsPage.jsx'
 import AllProducts from './components/Products/allProducts/AllProducts.jsx'
+import Under50 from './components/Products/under50/Under50.jsx'
+import Under100 from './components/Products/under100/Under100.jsx'
 
 const router = createBrowserRouter([
   {
@@ -29,8 +31,28 @@ const router = createBrowserRouter([
           },
           {
             path: 'under30',
-            element: <Under30 />
-          }
+            element: <Under30 />,
+            children: [
+              {
+                path: ':id',
+                element: <Under30 />
+              }
+            ]
+          }, {
+            path: 'under50',
+            element: <Under50 />
+          }, {
+            path: 'under100',
+            element: <Under100 />
+          }, {
+            path: 'all',
+            element: <AllProducts />
+          },
+          {
+            path: 'cart',
+            element: <h1>Cart</h1>
+          },
+          
         ]
       },
     ]
