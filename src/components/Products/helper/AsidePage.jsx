@@ -8,7 +8,7 @@ function AsidePage() {
   };
 
   return (
-    <aside className='flex'>
+    <aside className='flex md:sticky md:top-48'>
       <div className='md:pl-16 flex md:flex-col gap-1 items-start'>
         <button className='font-montserrat-reg text-base'>
           <NavLink to='/products' className={isLinkActive('/products') ? 'text-lime-700 font-semibold' : ''}>
