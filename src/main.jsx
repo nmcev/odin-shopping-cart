@@ -44,16 +44,16 @@ const router = createBrowserRouter([
           }, {
             path: 'under100',
             element: <Under100 />
-          }, {
-            path: 'all',
-            element: <AllProducts />
-          },
-          {
-            path: 'cart',
-            element: <h1>Cart</h1>
-          },
-          
+          },          
         ]
+      },
+      {
+        path: 'cart',
+        element: <h1>Cart</h1>
+      }, 
+      {
+        path: 'about',
+        element: <h1>About</h1>
       },
     ]
     
