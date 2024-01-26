@@ -11,6 +11,7 @@ export default {
       header: ['header', 'sans-serif'],
       products: ['montserrat', 'sans-serif'],
       'montserrat-reg': ['montserrat-reg', 'sans-serif'],
+      Nunito: ['Nunito Sans', 'sans-serif'],
     },
     extend: {
       backgroundImage: {
