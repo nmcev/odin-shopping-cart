@@ -1,18 +1,7 @@
-import { useState } from 'react'
 import PropTypes from 'prop-types'
+import IncreasingButton from './IncreasingButton'
 
 function ItemInfo({data, id}) {
-    const [numberOFItems, setNumberOfItems] = useState(1);
-
-    const handleIncrease = () => {
-      setNumberOfItems(numberOFItems + 1);
-    }
-  
-    const handleDecrease = () => {
-      if (numberOFItems > 1) {
-        setNumberOfItems(numberOFItems - 1);
-      }
-    }
 
   return (
     <div className='flex md:mb-12 mb-9  md:pl-14 md:gap-32 max-sm:flex-col'>
@@ -25,19 +14,7 @@ function ItemInfo({data, id}) {
         <p className=' pt-2'>Tax included. Shipping calculated at checkout.</p>
 
         <div className='flex pt-4'>
-         <div className='flex gap-6 border-2 border-border justify-start p-2 px-3 text-18 font-Nunito'>
-           <button onClick={handleDecrease} className=' cursor-pointer'>
-            <span> - </span>
-           </button>
-
-             <div>
-              <span>{numberOFItems}</span>
-            </div>
-
-            <button onClick={handleIncrease} className=' cursor-pointer'>
-             <span> + </span>
-             </button>
-          </div>
+            <IncreasingButton />
         </div>
         
         <div className=' pt-4'>
