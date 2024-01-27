@@ -1,7 +1,9 @@
 import  cart  from '../../assets/icons/cart.svg'
 import { Link } from 'react-router-dom'
-
+import { useCart } from '../../hooks/CartContext'
 function NavLinks() {
+    const { quantity } = useCart();
+    console.log(quantity)
     return ( 
     <nav>
         <ul className=" cursor-pointer flex md:flex-row flex-col  md:text-xl text-sm items-center gap-12 text-lilac font-extrabold uppercase font-poppins">
@@ -21,7 +23,7 @@ function NavLinks() {
                     />
        
                  <span className="cart-item-count ml-8 rounded-full absolute top-0 right-0 text-sm text-orange">
-                      10
+                      {quantity}
                  </span>
       
                 </button>
