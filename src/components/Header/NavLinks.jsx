@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useCart } from '../../hooks/CartContext'
 function NavLinks() {
     const { quantity } = useCart();
-    console.log(quantity)
+    
     return ( 
     <nav>
         <ul className=" cursor-pointer flex md:flex-row flex-col  md:text-xl text-sm items-center gap-12 text-lilac font-extrabold uppercase font-poppins">
