@@ -10,11 +10,16 @@ import MainProductsPage from './components/Products/MainProductsPage.jsx'
 import AllProducts from './components/Products/allProducts/AllProducts.jsx'
 import Under50 from './components/Products/under50/Under50.jsx'
 import Under100 from './components/Products/under100/Under100.jsx'
-
+import Cart from './components/Cart/Cart.jsx'
+import { CartProvider } from './hooks/ContextProvider.jsx'
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: (
+      <CartProvider>
+        <App />
+      </CartProvider>
+    ),
     children: [
       {
         path: '',
@@ -49,7 +54,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'cart',
-        element: <h1>Cart</h1>
+        element: <Cart  />
       }, 
       {
         path: 'about',
