@@ -1,15 +1,5 @@
-import { useState } from 'react'
-function IncreasingButton() {
-    const [numberOFItems, setNumberOfItems] = useState(1)
-    const handleIncrease = () => {
-        setNumberOfItems(numberOFItems + 1)
-    }
-    const handleDecrease = () => {
-        if (numberOFItems > 1) {
-            setNumberOfItems(numberOFItems - 1)
-        }
-    }
-    
+import PropTypes from 'prop-types'
+function IncreasingButton({ handleIncrease, handleDecrease, numberOfItems}) {
     return (
     <div className='flex flex-col '>
       <div className='flex gap-6 border-2 border-border justify-start p-2 px-3 text-18 font-Nunito'>
@@ -18,7 +8,7 @@ function IncreasingButton() {
         </button>
 
         <div>
-         <span>{numberOFItems}</span>
+         <span>{numberOfItems}</span>
         </div>
 
       <button   onClick={handleIncrease} className=' cursor-pointer'>
@@ -29,4 +19,16 @@ function IncreasingButton() {
   )
 }
 
-export default IncreasingButton
+IncreasingButton.propTypes = {
+    handleIncrease: PropTypes.func.isRequired,
+    handleDecrease: PropTypes.func.isRequired,
+    numberOfItems: PropTypes.number.isRequired,
+}
+
+IncreasingButton.defaultProps = {
+  handleDecrease: () => { },
+  handleIncrease: () => { },
+    numberOFItems: 1,
+}
+
+export default IncreasingButton;
