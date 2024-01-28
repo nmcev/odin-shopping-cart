@@ -1,0 +1,121 @@
+{
+    "catagories": [
+        "under30",
+        "under50",
+        "under100"
+    ],
+    "under30": [
+        {
+            "category": "under30",
+            "name": "PADDYWAX KIN - BLACK FIG & ROSE",
+            "price": 18,
+            "description": "With shapes inspired by the Japanese tradition of tea and sake, Kin offers both elegance and practicality. These ceramic vessels are dishwasher, microwave, and food safe. Kin is designed to live in the kitchen for traditions of your own!",
+            "img": "https://thecandlelibrary.com/cdn/shop/files/paddywax-kin-in-black-fig-rose-small_275x.jpg?v=1701990738",
+            "id": 0,
+            "quantity": 1
+        },
+        {
+            "category": "under30",
+            "name": "PADDYWAX KIN - JASMINE & BAMBOO",
+            "price": 18,
+            "description": "With shapes inspired by the Japanese tradition of tea and sake, Kin offers both elegance and practicality. These ceramic vessels are dishwasher, microwave, and food safe. Kin is designed to live in the kitchen for traditions of your own!",
+            "img": "https://thecandlelibrary.com/cdn/shop/files/paddywax-kin-in-jasmine-bamboo-large_275x.jpg?v=1701990951",
+            "id": 1,
+            "quantity": 1
+        },
+        {
+            "category": "under30",
+            "name": "SOUTHERN WILD CO -SIRENS",
+            "price": 30,
+            "description": "A melting pot of native Australian botanicals and gentle homegrown flora, Sirens is a luscious blend of lemon myrtle, silver wattle and rose wrapped gracefully in warm woody undertones.",
+            "img": "https://thecandlelibrary.com/cdn/shop/products/Southern-wild-co-Sirens_Clancy_Job_2_275x.jpg?v=1626328883",
+            "id": 2,
+            "quantity": 1
+        },
+        {
+            "category": "under30",
+            "name": "SOUTHERN WILD CO - OCEAN ISLE",
+            "price": 30,
+            "description": "The dark turquoise glass features the rousing James McAuley poem, Terra Australis, in keeping with Allira’s salt spray and windswept vista. ",
+            "img": "https://thecandlelibrary.com/cdn/shop/products/Southern-wild-co-ocean-isle-1_275x.jpg?v=1629961756",
+            "id": 3,
+            "quantity": 1
+        },
+        {
+            "category": "under30",
+            "name": "HIBI 10 MINUTE INCENSE : TRADITIONAL SCENT",
+            "price": 15,
+            "description": "Hyogo prefecture’s traditional crafts include centuries of incense blending, and more recently, 70% of Japan’s match production: the innovation of hibi self-lighting incense sticks is to combine the two.",
+            "img": "https://thecandlelibrary.com/cdn/shop/products/hibi_traditional_scents_7_275x.jpg?v=1572172778",
+            "id": 4,
+            "quantity": 1
+        }
+    ],
+    "under50": [
+        {
+            "category": "under50",
+            "name": "STUDIO MILLIGRAM - SHOAL",
+            "price": 45,
+            "description": "With the crisp, salty-spray atmosphere of the rugged Australian shoreline, Shoal features notes of aniseed, amber and moss.",
+            "img": "https://thecandlelibrary.com/cdn/shop/products/MG-CAND_SHOAL_240.01_275x.jpg?v=1617146229",
+            "id": 0,
+            "quantity": 1
+        },
+        {
+            "category": "under50",
+            "name": "EARL OF EAST - WILDFLOWER",
+            "price": 50,
+            "description": "and-poured in East London the Wildflower candle reminds us of an English country garden. A bespoke blend of jasmine, gardenia and rose geranium this is the most traditional scent profile of the Earl of East home fragrance range.",
+            "img": "https://thecandlelibrary.com/cdn/shop/products/earl-of-east-wildflower-candle-6_600x_faa24a78-1c22-42cc-8a8e-cae6df77d677_275x.jpg?v=1673582188",
+            "id": 1,
+            "quantity": 1
+        },
+        {
+            "category": "under50",
+            "name": "COFFEE",
+            "price": 48,
+            "description": "The Coffee candle is a rich and warm blend of roasted coffee beans, hazelnut and vanilla. This is the perfect candle for coffee lovers and is best lit in the morning or afternoon with a cup of your favourite brew.",
+            "img": "https://thecandlelibrary.com/cdn/shop/products/White_3_275x.jpg?v=1547161215",
+            "id": 2,
+            "quantity": 1
+        },
+        {
+            "category": "under50",
+            "name": "PF CANDLE CO - BLACK FIG",
+            "price": 40,
+            "description": "Mysterious and compelling, Black Fig infuses bright evergreen top notes with a heart of spice clove and tobacco.",
+            "img": "https://thecandlelibrary.com/cdn/shop/products/Black-Fig-Square-3_275x.jpg?v=1627957761",
+            "id": 3,
+            "quantity": 1
+        }
+    ],
+    "under100": [
+        {
+            "category": "under100",
+            "name": "ASHLEY & CO - ONCE UPON & TIME",
+            "price": 65,
+            "description": "Hypnotic blooms of Black Gardenia loom a lonesome sense to wonder. A solitary Fig among the thick of brambles yearn to leave you ponder.",
+            "img": "https://thecandlelibrary.com/cdn/shop/products/AC22_WPOUT_Web_275x.jpg?v=1648164931",
+            "id": 0,
+            "quantity": 1
+        },
+        {
+            "category": "under100",
+            "name": "MARRAKESH",
+            "price": 68,
+            "description": "Picture yourself wandering through a market in Marrakesh. You pass a vendor peddling spice, a lady selling jasmine blossoms, and all around you can smell musk, amber, cedar and sandalwood.",
+            "img": "https://thecandlelibrary.com/cdn/shop/products/SQUARE1_4df68536-b01a-4e4e-983c-d691064d6001_275x.jpg?v=1508305330",
+            "id": 1,
+            "quantity": 1
+        },
+        {
+            "category": "under100",
+            "name": "ASHLEY & CO - BONBERRY",
+            "price": 80,
+            "description": "With sweet touches of blackcurrant and plum supported by breezy notes of geranium and bergamot, the Bonberry Waxed Perfume creates a vibrant, warm atmosphere rich with delicate details and soft tones.",
+            "img": "https://thecandlelibrary.com/cdn/shop/products/MDBON_0148_ProductImage_800x1190px_275x.jpg?v=1681775859",
+            "id": 2,
+            "quantity": 1
+        }
+    ]
+}
