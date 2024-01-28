@@ -3,9 +3,11 @@ import { useCart } from "../../hooks/CartContext"
 
 function Cart() {
     
-    const { shoppedItems, handleRemoveItem, increaseQuantity, decreaseQuantity  } = useCart();
-    const totalPrice = shoppedItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
-    const totalQuantity = shoppedItems.reduce((acc, item) => acc + item.quantity, 0);
+    const { handleRemoveItem, increaseQuantity, decreaseQuantity  } = useCart();
+   
+    const storedItems = JSON.parse(localStorage.getItem('shoppedItems')) || [];
+    const totalPrice = storedItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+    const totalQuantity = storedItems.reduce((acc, item) => acc + item.quantity, 0);
 
     return (
     <div className="pt-24 bg-silver flex justify-center pb-12">
@@ -22,9 +24,9 @@ function Cart() {
                     <h5>Total</h5>
                 </div>
             </div>
-                {shoppedItems.length > 0 ? (
+                {storedItems.length > 0 ? (
                     <>
-                    <CartItem data={shoppedItems} handleRemoveItem={handleRemoveItem} increaseQuantity={increaseQuantity} decreaseQuantity={decreaseQuantity} />
+                    <CartItem data={storedItems} handleRemoveItem={handleRemoveItem} increaseQuantity={increaseQuantity} decreaseQuantity={decreaseQuantity} />
                 <div className="px-4 max-sm:text-16 border-t-2 border-border">
                     <div className='flex justify-between items-center pt-12'>
                         <h1 className='font-Nunito'>Total</h1>
