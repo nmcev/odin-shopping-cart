@@ -68,9 +68,9 @@ export const CartProvider = ({ children }) => {
     const handleRemoveItem = (id) => {
         const updatedItems = shoppedItems.filter((item) => item.id !== id);
         const quantityOfItem = shoppedItems.find((item) => item.id === id).quantity;
+        localStorage.setItem('shoppedItems', JSON.stringify(updatedItems));
         setQuantity(quantity - quantityOfItem);
         setShoppedItems(updatedItems);
-
     }
 
     const handleEmptyCart = () => {
