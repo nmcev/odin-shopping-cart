@@ -2,8 +2,8 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
 
-function ItemsCard({ img, name, price, id }) {
-  const url = `/products/under30/${id}`;
+function ItemsCard({ img, name, price, id, category }) {
+  const url = `/products/${category}/${id}`;
 
   return (
 
@@ -27,6 +27,7 @@ ItemsCard.propTypes = {
   name: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,
+  category: PropTypes.string.isRequired,
 
 }
 export default ItemsCard
