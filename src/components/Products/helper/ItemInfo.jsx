@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types'
 import IncreasingButton from './IncreasingButton'
-
-function ItemInfo({data, id}) {
-
+function ItemInfo({ data, id, handleAddToCart, numberOfItems, handleIncrease, handleDecrease}) {  
   return (
     <div className='flex md:mb-12 mb-9  xl:pl-52 md:gap-24 md:pl-12 sm:gap-20 max-sm:flex-col'>
     <img src={data[id].img} alt="" className='sm:max-w-full max-w-44 sm:h-full' />
@@ -14,11 +12,11 @@ function ItemInfo({data, id}) {
         <p className=' pt-2'>Tax included. Shipping calculated at checkout.</p>
 
         <div className='flex pt-4'>
-            <IncreasingButton />
+            <IncreasingButton handleIncrease={handleIncrease} handleDecrease={handleDecrease} numberOfItems={numberOfItems} />
         </div>
         
         <div className=' pt-4'>
-          <button className='bg-li text-white py-2 px-6 text-18 font-Nunito w-full hover:bg-transparent transition-colors delay-100 ease-in duration-300 hover:text-black'>Add to cart</button>
+          <button onClick={() => handleAddToCart(data, id)} className='bg-li text-white py-2 px-6 text-18 font-Nunito w-full hover:bg-fuchsia-200 transition-colors  ease-in duration-100 hover:text-black'>Add to cart</button>
         </div>
 
         <div className='flex  flex-col'>
@@ -35,7 +33,11 @@ function ItemInfo({data, id}) {
 
 ItemInfo.propTypes = {
   data: PropTypes.array.isRequired,
-    id: PropTypes.string.isRequired, 
-    description: PropTypes.string,
+  id: PropTypes.string.isRequired, 
+  handleAddToCart: PropTypes.func.isRequired,
+  numberOfItems: PropTypes.number.isRequired,
+  handleIncrease: PropTypes.func.isRequired,
+  handleDecrease: PropTypes.func.isRequired,
+  
 }
 export default ItemInfo
