@@ -21,8 +21,14 @@ export const CartProvider = ({ children }) => {
     
 
     const [numberOfItems, setNumberOfItems] = useState(1);
-    const [quantity, setQuantity] = useState(0);
+    const [quantity, setQuantity] = useState(
+        parseInt(localStorage.getItem('quantity'), 10) || 0
+    );
     const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        localStorage.setItem('quantity', quantity.toString());
+    }, [quantity]);
 
     useEffect(() => {
         setTimeout(() => {
