@@ -1,22 +1,28 @@
-import { useState, useEffect } from 'react'
 import TitlePage from '../helper/TitlePage'
 import Section from '../helper/Section'
 import SidePageAndItems from '../helper/SidePageAndItems'
-
+import { useParams } from 'react-router-dom';
+import { Spinner } from '@chakra-ui/react'
+import ItemsCard from '../helper/ItemsCard'
+import ItemsContainer from '../helper/ItemsContainer'
+import ItemInfo from '../helper/ItemInfo';
+import { useCart } from '../../../hooks/CartContext';
 function Under50() {
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false)
-    }, 0)
-  }, [])
+  const { id } = useParams(); 
+  const { data50, numberOfItems, handleIncrease, handleDecrease, handleAddToCart, loading } = useCart();
   
-
 
   if (loading) {
     return (
-      <h1 className='grid place-items-center'>Loading...</h1>
+      <div className='grid place-items-center h-dvh'>
+      <Spinner
+       thickness='4px'
+         speed='0.65s'
+         emptyColor='gray.200'
+         color='gray.500'
+        size='xl'
+        />
+        </div>
     )
   }
 
@@ -24,14 +30,38 @@ function Under50() {
       <Section>
         
      
-         <TitlePage text='CANDLE COLLECTION UNDER $50' description={'Explore our budget-friendly candle selection – all under $50. From calming scents to stylish designs, find affordable candles to light up your space or gift to loved ones'} />
-        <SidePageAndItems>
-          <div className="w-full  flex flex-col gap-6">
+      <TitlePage />
+     <SidePageAndItems>
+       {/* if the is undefined, it shows all the items. If it not then it will show the element that the user clicked on */}
+       {id === undefined && data50[id] === undefined ? (
+         <ItemsContainer>
+           {
+             data50.map((item) => {
+               const { name, price, img, id, category } = item;
 
-          </div>
-        </SidePageAndItems>
-        
-      </Section>
+               return (
+                <ItemsCard  name={name} price={price} img={img} id={id} category={category} key={id}/>
+                )
+             }) 
+           }
+         </ItemsContainer>  
+         
+         ) :
+          data50[id] ? ( 
+           <ItemInfo data={data50} id={id} 
+             handleAddToCart={handleAddToCart}
+             numberOfItems={numberOfItems}
+             handleIncrease={handleIncrease}
+             handleDecrease={handleDecrease}
+           />
+         ) :
+           (
+             <h1 className='grid place-items-center text-20 font-Nunito font-black'>Not Found</h1>
+           )
+     }
+     </SidePageAndItems>
+     
+   </Section>
   )
 }
 
