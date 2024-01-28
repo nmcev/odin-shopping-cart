@@ -12,6 +12,7 @@ import Under50 from './components/Products/under50/Under50.jsx'
 import Under100 from './components/Products/under100/Under100.jsx'
 import Cart from './components/Cart/Cart.jsx'
 import { CartProvider } from './hooks/ContextProvider.jsx'
+import About from './components/About/About.jsx'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -45,10 +46,22 @@ const router = createBrowserRouter([
             ]
           }, {
             path: 'under50',
-            element: <Under50 />
+            element: <Under50 />,
+            children: [
+              {
+                path: ':id',
+                element: <Under30 />
+              }
+            ]
           }, {
             path: 'under100',
-            element: <Under100 />
+            element: <Under100 />,
+            children: [
+              {
+                path: ':id',
+                element: <Under30 />
+              }
+            ]
           },          
         ]
       },
@@ -58,7 +71,7 @@ const router = createBrowserRouter([
       }, 
       {
         path: 'about',
-        element: <h1>About</h1>
+        element: <About />
       },
     ]
     
