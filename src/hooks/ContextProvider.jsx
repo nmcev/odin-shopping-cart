@@ -12,8 +12,12 @@ export const CartProvider = ({ children }) => {
     const data50 = data.under50;
     const data100 = data.under100;
 
-    const [shoppedItems, setShoppedItems] = useState([]);
-
+    const initialShoppedItems = JSON.parse(localStorage.getItem('shoppedItems')) || [];
+    const [shoppedItems, setShoppedItems] = useState(initialShoppedItems);
+  
+    useEffect(() => {
+        localStorage.setItem('shoppedItems', JSON.stringify(shoppedItems));
+    }, [shoppedItems]);
     
 
     const [numberOfItems, setNumberOfItems] = useState(1);
@@ -52,9 +56,7 @@ export const CartProvider = ({ children }) => {
             setShoppedItems(updatedItems);
             setQuantity(quantity + numberOfItems);
         }
-
         resetNumberOfItems();
-        console.log(shoppedItems);
     }
 
     const handleRemoveItem = (id) => {
