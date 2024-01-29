@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom"
+import './helper/home.css'
 function Home() {
     return (
-        <main className="bg-home bg-no-repeat bg-cover bg-center h-dvh ">
+        <main className=" h-dvh ">
         <div className="flex flex-col justify-center items-center h-full ">
           <button className="
             bg-lilac hover:bg-li transition-all duration-300
