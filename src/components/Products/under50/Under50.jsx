@@ -30,7 +30,7 @@ function Under50() {
       <Section>
         
      
-      <TitlePage />
+      <TitlePage text='Candle Collection Under $50' description={"Explore our budget-friendly candle selection – all under $50. From calming scents to stylish designs, find affordable candles to light up your space or gift to loved ones."} />
      <SidePageAndItems>
        {/* if the is undefined, it shows all the items. If it not then it will show the element that the user clicked on */}
        {id === undefined && data50[id] === undefined ? (
