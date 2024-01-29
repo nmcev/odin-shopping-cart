@@ -1,13 +1,19 @@
 import CartItem from "../Products/helper/CartItem"
 import { useCart } from "../../hooks/CartContext"
+import { useEffect, useState } from "react"
 
 function Cart() {
     
-    const { handleRemoveItem, increaseQuantity, decreaseQuantity  } = useCart();
-   
+    const { handleRemoveItem, increaseQuantity, decreaseQuantity, quantity  } = useCart();
+       const [totalQuantity, setTotalQuantity] = useState(quantity);
+
+    useEffect(() => {
+        setTotalQuantity(quantity);
+    }, [quantity]);
+
+            
     const storedItems = JSON.parse(localStorage.getItem('shoppedItems')) || [];
     const totalPrice = storedItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
-    const totalQuantity = storedItems.reduce((acc, item) => acc + item.quantity, 0);
 
     return (
     <div className="pt-24 bg-silver flex justify-center pb-12">
