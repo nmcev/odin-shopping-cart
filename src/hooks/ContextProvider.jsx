@@ -65,12 +65,12 @@ export const CartProvider = ({ children }) => {
         resetNumberOfItems();
     }
 
-    const handleRemoveItem = (id) => {
-        const updatedItems = shoppedItems.filter((item) => item.id !== id);
-        const quantityOfItem = shoppedItems.find((item) => item.id === id).quantity;
-        localStorage.setItem('shoppedItems', JSON.stringify(updatedItems));
-        setQuantity(quantity - quantityOfItem);
+    const handleRemoveItem = (item) => {
+        const existingItemIndex = shoppedItems.findIndex((cartItem) => cartItem.name === item.name);
+        const updatedItems = [...shoppedItems];
+        updatedItems.splice(existingItemIndex, 1);
         setShoppedItems(updatedItems);
+        setQuantity(quantity - item.quantity);
     }
 
     const handleEmptyCart = () => {
@@ -82,22 +82,24 @@ export const CartProvider = ({ children }) => {
     }
 
     
-    function increaseQuantity(id) {
-        const existingItemIndex = shoppedItems.findIndex((cartItem) => cartItem.id === id);
+    function increaseQuantity(item) {
+        const existingItemIndex = shoppedItems.findIndex((cartItem) => cartItem.name === item.name);
         const updatedItems = [...shoppedItems];
         updatedItems[existingItemIndex].quantity += 1;
-        setQuantity(quantity + 1);
         setShoppedItems(updatedItems);
+        setQuantity(quantity + 1);
+
     }
 
-    function decreaseQuantity(id) {
-        const existingItemIndex = shoppedItems.findIndex((cartItem) => cartItem.id === id);
+    function decreaseQuantity(item) {
+        const existingItemIndex = shoppedItems.findIndex((cartItem) => cartItem.name === item.name);
         const updatedItems = [...shoppedItems];
         if (updatedItems[existingItemIndex].quantity > 1) {
             updatedItems[existingItemIndex].quantity -= 1;
+            setShoppedItems(updatedItems);
             setQuantity(quantity - 1);
         }
-        setShoppedItems(updatedItems);
+        
     }
 
 
