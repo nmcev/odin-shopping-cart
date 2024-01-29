@@ -7,7 +7,7 @@ const CartItem = ({ data, handleRemoveItem, increaseQuantity, decreaseQuantity }
     <>
     
  {data.map((item) => {
-   const { name, price, img, quantity, id } = item;
+   const { name, price, img, quantity } = item;
 
      return (
     <React.Fragment key={uuidv4()}>
@@ -35,16 +35,16 @@ const CartItem = ({ data, handleRemoveItem, increaseQuantity, decreaseQuantity }
               
              <div className='flex max-sm:gap-6 justify-around  items-center mt-3 p-2 border-2 border-border font-Nunito d'>
                <div className="flex items-center  w-full justify-center ">
-                 <button  onClick={() => increaseQuantity(id)}> + </button>
+                 <button  onClick={() => increaseQuantity(item)}> + </button>
                </div>
                
                               
                <div className=" flex  w-full justify-center items-center">
-                 <button onClick={() => handleRemoveItem(id)}> x </button>
+                 <button onClick={() => handleRemoveItem(item)}> x </button>
                </div>
 
                <div className=" flex  w-full justify-center">
-                <button onClick={() => decreaseQuantity(id)}> - </button>
+                <button onClick={() => decreaseQuantity(item)}> - </button>
                </div>
              </div>
             
