@@ -27,7 +27,7 @@ function AllProducts() {
 
     <SidePageAndItems>
         <div className="w-10/12 flex justify-center pb-8 relative">
-         <img src={img} alt="Candle and planets" className="w-full max-w-4xl max-h-80 object-cover object-center rounded-lg shadow-lg z-10" loading="lazy" />
+         <img src={img} alt="Candle and planets" className="w-full max-w-4xl max-h-80 object-cover object-center rounded-lg shadow-lg z-10" />
           <div className="absolute inset-0 flex items-center justify-center">
               <p className="text-creamy z-20 text-2xl font-bold font-poppins bg-black p-2  max-sm:text-lg text-center max-sm:max-w-80">
                 Candle are a great way to bring fragrance into your home.
