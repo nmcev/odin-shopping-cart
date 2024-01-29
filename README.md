@@ -1,8 +1,20 @@
-# React + Vite
+# Shopping Cart Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Content
+- [Shopping Cart Project](#shopping-cart-project)
+  - [Content](#content)
+  - [Description](#description)
+    - [Used Technologies](#used-technologies)
+    - [Live Demo](#live-demo)
+## Description
+Shopping Cart is mock shopping cart application that allows users to add and remove items from their cart. This Project was built along side the [The Odin Project] (https://www.theodinproject.com/) curriculum.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Used Technologies 
+- ReactJS
+- TailwindCSS
+  
+### Live Demo 
+[Live Demo](https://odin-shoppingcart.netlify.app/)
+
+
