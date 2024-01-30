@@ -11,8 +11,8 @@ function ItemsCard({ img, name, price, id, category }) {
       <div className='flex flex-col md:mb-12 mb-9 md:pl-14 items-center'>
         <img src={img} alt={name} className='md:max-w-full max-w-44 animate-fade ' loading='lazy' />
         <div className="md:max-w-full max-w-48 flex flex-col items-center text-12 mt-5 gap-y-2 ">
-          <h1 className=' tracking-wider text-center'>{name}</h1>
-          <span className=' text-dimGray'>{price}$</span>
+          <h1 className=' tracking-wider text-center dark:text-creamy '>{name}</h1>
+          <span className=' text-dimGray dark:text-creamy'>{price}$</span>
         </div>
       </div>
     </Link>

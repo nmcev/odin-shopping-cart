@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 function TitlePage({ text, description }) {
     return (
-        <div className="grid place-items-center font-products text-xl uppercase text-products">
+        <div className="grid place-items-center font-products text-xl uppercase text-products dark:text-silver">
             <h1 className=' mb-4 mt-8 text-center font-montserrat-reg'>{text}</h1>
-            <p className='text-sm max-w-lg mx-auto text-center font-products mb-8 text-products'>
+            <p className='text-sm max-w-lg mx-auto text-center font-products mb-8 '>
                 {description}
                 </p>
 

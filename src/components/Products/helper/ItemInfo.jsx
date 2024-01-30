@@ -6,11 +6,11 @@ function ItemInfo({ data, id, handleAddToCart, numberOfItems, handleIncrease, ha
     <div className='flex md:mb-12 mb-9  xl:pl-52 md:gap-24 md:pl-12 sm:gap-20 max-sm:flex-col'> 
     <img src={data[id].img} alt="" className='animate-fadeInUp sm:max-w-full max-w-44 sm:h-full' />
     <div className="md:max-w-96 max-w-48 pr-10  text-12 gap-y-2 flex flex-col  max-sm:pt-5">
-        <h1 className=' tracking-wider text-18 font-montserrat-reg'>{data[id].name}</h1>
+        <h1 className=' tracking-wider text-18 font-montserrat-reg dark:text-creamy'>{data[id].name}</h1>
         <div> 
-          <span className=' text-dimGray text-16  font-products'>${data[id].price}</span>
+          <span className=' text-dimGray text-16  font-products dark:text-creamy'>${data[id].price}</span>
         </div>
-        <p className=' pt-2'>Tax included. Shipping calculated at checkout.</p>
+        <p className=' pt-2 dark:text-creamy'>Tax included. Shipping calculated at checkout.</p>
 
         <div className='flex pt-4'>
             <IncreasingButton handleIncrease={handleIncrease} handleDecrease={handleDecrease} numberOfItems={numberOfItems} />
@@ -21,8 +21,8 @@ function ItemInfo({ data, id, handleAddToCart, numberOfItems, handleIncrease, ha
         </div>
 
         <div className='flex  flex-col'>
-          <span className='text-18 font-Nunito'>Description</span>
-          <p className='text-16 font-Nunito max-w-full'>
+          <span className='text-18 font-Nunito dark:text-creamy'>Description</span>
+          <p className='text-16 font-Nunito max-w-full dark:text-creamy'>
             {data[id].description}
           </p>
         </div>
