@@ -2,6 +2,7 @@ import  cart  from '../../assets/icons/cart.svg'
 import { Link } from 'react-router-dom'
 import { useCart } from '../../hooks/CartContext'
 import { useEffect, useState } from 'react'
+import PropTypes from 'prop-types'
 function NavLinks({onClose}) {
     const { quantity } = useCart();
     const [totalQuantity, setTotalQuantity] = useState(quantity);
@@ -39,6 +40,10 @@ function NavLinks({onClose}) {
         </ul>
     </nav>
      )
+}
+
+NavLinks.propTypes = {
+    onClose: PropTypes.func.isRequired,
 }
 
 export default NavLinks
