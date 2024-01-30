@@ -15,6 +15,6 @@ Shopping Cart is mock shopping cart application that allows users to add and rem
 - TailwindCSS
   
 ## Live Demo 
-[Live Demo](https://odin-shoppingcart.netlify.app/)
+[Live Demo](https://shopping-cart.muha.tech/)
 
 
