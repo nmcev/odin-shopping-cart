@@ -13,6 +13,7 @@ import Under100 from './components/Products/under100/Under100.jsx'
 import Cart from './components/Cart/Cart.jsx'
 import { CartProvider } from './hooks/ContextProvider.jsx'
 import About from './components/About/About.jsx'
+import ErrorPage from './components/Error/ErrorPage.jsx'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -73,7 +74,8 @@ const router = createBrowserRouter([
         path: 'about',
         element: <About />
       },
-    ]
+    ],
+    errorElement: <ErrorPage />
     
   }
 ])
