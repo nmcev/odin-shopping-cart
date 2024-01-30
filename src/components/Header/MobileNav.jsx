@@ -14,7 +14,7 @@ const MobileNav = ({ isOpen, onClose }) => {
       </div>
 
          <div className='flex justify-center items-center'>
-              <NavLinks />
+              <NavLinks onClose={onClose}/>
          </div>
     </div>
   );

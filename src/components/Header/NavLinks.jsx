@@ -2,7 +2,7 @@ import  cart  from '../../assets/icons/cart.svg'
 import { Link } from 'react-router-dom'
 import { useCart } from '../../hooks/CartContext'
 import { useEffect, useState } from 'react'
-function NavLinks() {
+function NavLinks({onClose}) {
     const { quantity } = useCart();
     const [totalQuantity, setTotalQuantity] = useState(quantity);
 
@@ -14,14 +14,14 @@ function NavLinks() {
     return ( 
     <nav>
         <ul className=" cursor-pointer flex md:flex-row flex-col  md:text-xl text-sm items-center gap-12 text-lilac font-extrabold uppercase font-poppins">
-            <Link to="/">Home</Link>
-            <Link to="products">Products</Link>
+            <Link to="/" onClick={onClose}>Home</Link>
+            <Link to="products" onClick={onClose}>Products</Link>
           
-            <Link to='about'>
+            <Link to='about' onClick={onClose}>
                  About
             </Link>
             
-            <Link to='cart'>
+            <Link to='cart' onClick={onClose} >
                 <button className='relative flex items-center p-2 text-white'>
                      <img
                          src={cart}
