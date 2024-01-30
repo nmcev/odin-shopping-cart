@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
 import './helper/home.css'
-import  Switcher  from '../../Switcher.jsx'
 function Home() {
     return (
         <main className=" h-dvh  relative ">
@@ -18,10 +17,6 @@ function Home() {
           </button>
         </div>
 
-        <div className="flex flex-col items-center transition duration-200  absolute p-2 bottom-4 bg-black">
-        <Switcher />
-
-        </div>
 
       </main>
   )
