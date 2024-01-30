@@ -19,6 +19,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.3",
     "react-slideshow-image": "^4.3.0",
+    "react-toggle-dark-mode": "^1.1.1",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
