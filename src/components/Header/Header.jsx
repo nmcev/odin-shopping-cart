@@ -2,6 +2,7 @@ import  { useState } from 'react';
 import MobileNav from './MobileNav';
 import menu from '../../assets/icons/menu.svg';
 import NavLinks from './NavLinks'
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,9 +19,11 @@ function Header() {
     <>
       <header className="flex justify-between items-center bg-creamy p-6 fixed w-full shadow-md z-30 dark:bg-zinc-800">
         <div className="flex items-center pl-2 md:pl-20">
-          <h1  className=" font-header text-2xl text-lilac">
+          <Link to='/'>
+          <h1  className=" font-header text-2xl text-lilac p-2 ">
             Craft Glow
           </h1>
+          </Link>
         </div>
 
         <div className="pr-0 md:pr-56">
