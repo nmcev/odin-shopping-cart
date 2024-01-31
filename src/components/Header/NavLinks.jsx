@@ -43,7 +43,7 @@ function NavLinks({onClose}) {
 }
 
 NavLinks.propTypes = {
-    onClose: PropTypes.func.isRequired,
+    onClose: PropTypes.func,
 }
 
 export default NavLinks
