@@ -30,8 +30,8 @@ function NavLinks({onClose}) {
                         className='w-6 mr-2'
                     />
        
-                 <span className="cart-item-count flex justify-center  absolute top-1 max-sm:top-0 right-2 max-sm:left-10 rounded-full  text-sm text-orange max-sm:text-creamy max-sm:bg-red-500 ">
-                    {totalQuantity > 0 ? totalQuantity: "" }
+                 <span className="cart-item-count flex justify-center  absolute top-1 max-sm:top-0 right-2 max-sm:left-10 rounded-full text-sm text-orange max-sm:text-creamy max-sm:bg-red-500 ">
+                    {totalQuantity > 99 ? '+99': totalQuantity > 0 ? totalQuantity: "" }
                  </span>
       
                 </button>
