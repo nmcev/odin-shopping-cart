@@ -23,14 +23,14 @@ function NavLinks({onClose}) {
             </Link>
             
             <Link to='cart' onClick={onClose} >
-                <button className='relative flex items-center p-2 text-white'>
+                <button className='relative flex items-center p-4 text-white'>
                      <img
                          src={cart}
                         alt="cart logo"
                         className='w-6 mr-2'
                     />
        
-                 <span className="cart-item-count ml-8 rounded-full absolute top-0 right-0 text-sm text-orange">
+                 <span className="cart-item-count flex justify-center  absolute top-1 max-sm:top-0 right-2 max-sm:left-10 rounded-full  text-sm text-orange max-sm:text-creamy max-sm:bg-red-500 ">
                     {totalQuantity > 0 ? totalQuantity: "" }
                  </span>
       
