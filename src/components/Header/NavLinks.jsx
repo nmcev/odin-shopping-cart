@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { useCart } from '../../hooks/CartContext'
 import { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
+import Switcher from '../../Switcher'
+
 function NavLinks({onClose}) {
     const { quantity } = useCart();
     const [totalQuantity, setTotalQuantity] = useState(quantity);
@@ -35,7 +37,10 @@ function NavLinks({onClose}) {
                  </span>
       
                 </button>
-            </Link>
+                </Link>
+                <div className={`flex  items-center transition duration-200 `}>
+                    <Switcher />
+                </div>
             
         </ul>
     </nav>
