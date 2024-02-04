@@ -3,6 +3,7 @@ import MobileNav from './MobileNav';
 import menu from '../../assets/icons/menu.svg';
 import NavLinks from './NavLinks'
 import { Link } from 'react-router-dom';
+import Switcher from '../../Switcher'
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,9 +36,12 @@ function Header() {
             <img src={menu} alt="menu" className="w-8 h-8" />
          </button>
                   
-          <div className='lg:flex hidden'>
-                <NavLinks />
-         </div>
+          <div className='lg:flex hidden  lg: items-center gap-12'>
+            <NavLinks />
+          <div className={`flex justify-center items-center transition duration-200 `}>
+          <Switcher />
+        </div>
+          </div>
         </div>
       </header>
 
