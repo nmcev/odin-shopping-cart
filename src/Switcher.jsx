@@ -14,7 +14,7 @@ export default function Switcher() {
   return (
     <>
       <div>
-        <DarkModeSwitch checked={darkSide} onChange={toggleDarkMode} size={56} />
+        <DarkModeSwitch checked={darkSide} onChange={toggleDarkMode} size={24} />
       </div>
     </>
   );
