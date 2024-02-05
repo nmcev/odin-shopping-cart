@@ -1,5 +1,40 @@
 import githubIcon from '../../assets/icons/GitHub.svg'
+import { useEffect, useRef } from 'react';
+import top from '../../assets/icons/top.svg'
+
 function Footer() {
+    const buttonRef = useRef(null);
+
+    const scrollToTop = () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+    }
+
+    useEffect(() => {
+
+        const handleScroll = () => {
+            if (buttonRef.current) {
+                buttonRef.current.style.transition = '0.3s ease-in-out';
+
+                if (window.scrollY > 100) {
+                    buttonRef.current.style.opacity = '1';
+                } else {
+                    buttonRef.current.style.opacity = '0';
+                }
+            }
+        }
+    
+        window.addEventListener('scroll', handleScroll);
+            
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
+
+    }, []);
+
+
     return (
         <>
 <div className="flex items-end w-full bg-white ">
@@ -80,6 +115,11 @@ function Footer() {
             <div className="container px-5 py-4 mx-auto">
                 <p className="text-sm text-gray-700 capitalize text-center dark:text-creamy">© 2024 All rights reserved </p>
             </div>
+        </div>
+        <div ref={buttonRef}  className="fixed bottom-0 right-0 p-4 ">
+            <button onClick={scrollToTop} className="bg-creamy rounded-full p-2 shadow-md">
+                <img src={top} alt="top" className="w-6 h-6" />
+            </button>
         </div>
     </footer>
 
