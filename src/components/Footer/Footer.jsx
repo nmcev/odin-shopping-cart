@@ -76,7 +76,7 @@ function Footer() {
             <small className="text-lg text-creamy font-poppins capitalize text-center" >Built By <a href="https://github.com/nmcev" className="text-white  text-center underline underline-offset-2 " rel="noopener noreferrer" target="_blank">Muha</a></small> 
             </div>           
         </div>
-        <div className="bg-gray-300 dark:bg-blue-950">
+        <div className="bg-gray-300 dark:bg-slate-800">
             <div className="container px-5 py-4 mx-auto">
                 <p className="text-sm text-gray-700 capitalize text-center dark:text-creamy">© 2024 All rights reserved </p>
             </div>
