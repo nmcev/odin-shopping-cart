@@ -3,9 +3,9 @@ import IncreasingButton from './IncreasingButton'
 import './item.css' 
 function ItemInfo({ data, id, handleAddToCart, numberOfItems, handleIncrease, handleDecrease}) {  
   return (
-    <div className='flex md:mb-12 mb-9  xl:pl-52 md:gap-24 md:pl-12 sm:gap-20 max-sm:flex-col'> 
+    <div className='flex md:mb-12 mb-9 pl-12 xl:pl-52 md:gap-24 sm:gap-20 max-sm:flex-col'> 
     <img src={data[id].img} alt="" className='animate-fadeInUp sm:max-w-full max-w-44 sm:h-full' />
-    <div className="md:max-w-96 max-w-48 pr-10  text-12 gap-y-2 flex flex-col  max-sm:pt-5">
+    <div className="md:max-w-md pr-10  text-12 gap-y-2 flex flex-col  max-sm:pt-5">
         <h1 className=' tracking-wider text-18 font-montserrat-reg dark:text-creamy'>{data[id].name}</h1>
         <div> 
           <span className=' text-dimGray text-16  font-products dark:text-creamy'>${data[id].price}</span>
