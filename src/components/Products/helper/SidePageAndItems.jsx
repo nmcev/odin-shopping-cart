@@ -7,7 +7,7 @@ function SidePageAndItems({ children }) {
         <section className='md:grid grid-cols-1-3 flex flex-col md:items-start items-center md:pt-12 pt-5'>
 
             <AsidePage />
-            <div className='max-sm:pt-6 max-sm:flex max-sm:items-center max-sm:flex-col'>
+            <div className='max-sm:pt-6 sm:pl-10  max-md:flex max-md:items-center max-md:flex-col'>
                 {children}
             </div>
 
