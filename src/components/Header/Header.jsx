@@ -17,7 +17,7 @@ function Header() {
 
   return (
     <>
-      <header className="flex justify-between items-center bg-creamy p-6 fixed w-full shadow-md z-30 dark:bg-zinc-800">
+      <header className="flex justify-between items-center bg-creamy p-6 fixed w-full shadow-md z-30 dark:bg-slate-800">
         <div className="flex items-center pl-2 md:pl-20">
           <Link to='/'>
           <h1  className=" font-header text-2xl text-lilac p-2 ">
