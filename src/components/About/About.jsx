@@ -14,7 +14,7 @@ const About = () => {
 
                     <p className='text-dark font-Nunito text-14 dark:text-creamy'>
                         <span className='text-md font-bold '>Hello, I&apos;m <span className=' font-regPoppins'>Muha</span> </span>
-                        . This is the last project that I have done with <span className=' text-purple-400 font-poppins'>The Odin Project</span> on The Front End Development Course especially on ReactJS section. 
+                        . This is the last project that I have done with <a className=' underline-offset-2 underline' href="https://theodinproject.com"><span className=' text-purple-400 font-poppins'>The Odin Project</span></a> on The Front End Development Course especially on ReactJS section. 
                         I have learned a lot of things about ReactJS.
                     </p>
 
