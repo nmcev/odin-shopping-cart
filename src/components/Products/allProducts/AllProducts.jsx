@@ -9,6 +9,7 @@ import ItemsContainer from "../helper/ItemsContainer"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react"
+import './allProducts.css'
 
 function AllProducts() {
   const { data30, data50, data100 } = useCart()
@@ -36,7 +37,7 @@ function AllProducts() {
           </div>
         
           <div className=" text- w-10/12 flex flex-col items-center  max-sm:items-start max-sm:pt-6 max-sm:pl-6 pb-24">
-            <h3 className="text-2xl  font-bold font-poppins text-dimGray max-sm:text-lg dark:text-white ">Our Products</h3>
+            <h3 className="text-4xl  font-bold font-poppins bg-gradient-to-r from-rose-300 via-purple-500 to-rose-300 bg-clip-text text-transparent animate-gradient  max-sm:text-lg dark:text-white  ">Our Products</h3>
             <p className="text-dark max-sm:text-start text-center max-sm:text-sm max-w-2xl pt-2 dark:text-creamy font-montserrat-reg">Explore our curated collection – diverse, versatile items for every need. From essentials to unique finds, discover quality products suitable for gifting.</p>
           </div>
 
